@@ -11,7 +11,7 @@ struct RootView: View {
 	
 	@ViewBuilder
 	private func toolbarContents() -> some View {
-		Button(action: { navigator.goBack(total: 2) }) {
+		Button(action: { navigator.goBack() }) {
 			Image(systemName: "arrow.left")
 		}
 		.disabled(!navigator.canGoBack)

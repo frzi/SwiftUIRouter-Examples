@@ -49,7 +49,7 @@ private struct SecondScreen: View {
 				.font(.title)
 				.padding()
 			
-			Text("Try swiping from the screen's left edge to the right. After dragging beyond a certain threshold, a either a `goBack` or `../` (one up) navigation will commit.")
+			Text("Try swiping from the screen's left edge to the right. After dragging beyond a certain threshold, either a `goBack` or `../` (one up) navigation will commit.")
 				.padding()
 			
 			NavLink(to: "two") {
