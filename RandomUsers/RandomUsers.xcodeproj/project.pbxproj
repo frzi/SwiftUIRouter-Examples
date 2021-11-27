@@ -23,14 +23,12 @@
 		C0316BA42752491E00BBE3D9 /* UsersScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BA22752491E00BBE3D9 /* UsersScreen.swift */; };
 		C0316BA627525F3800BBE3D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BA527525F3800BBE3D9 /* Extensions.swift */; };
 		C0316BA727525F3800BBE3D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BA527525F3800BBE3D9 /* Extensions.swift */; };
-		C0316BAD2752629300BBE3D9 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0316BAC2752629300BBE3D9 /* SwiftUIRouter */; };
 		C0316BAF275263F700BBE3D9 /* UserDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BAE275263F700BBE3D9 /* UserDetailScreen.swift */; };
 		C0316BB0275263F700BBE3D9 /* UserDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BAE275263F700BBE3D9 /* UserDetailScreen.swift */; };
 		C0316BB22752690900BBE3D9 /* ShortcutsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BB12752690900BBE3D9 /* ShortcutsScreen.swift */; };
 		C0316BB32752690900BBE3D9 /* ShortcutsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BB12752690900BBE3D9 /* ShortcutsScreen.swift */; };
 		C0316BB5275274FC00BBE3D9 /* UserLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BB4275274FC00BBE3D9 /* UserLocationScreen.swift */; };
 		C0316BB6275274FC00BBE3D9 /* UserLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BB4275274FC00BBE3D9 /* UserLocationScreen.swift */; };
-		C0316BB827527FE100BBE3D9 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0316BB727527FE100BBE3D9 /* SwiftUIRouter */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,10 +43,10 @@
 		C0316B9E275245CD00BBE3D9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		C0316BA22752491E00BBE3D9 /* UsersScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersScreen.swift; sourceTree = "<group>"; };
 		C0316BA527525F3800BBE3D9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		C0316BAB2752627F00BBE3D9 /* SwiftUIRouter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUIRouter; path = ../../SwiftUIRouter; sourceTree = "<group>"; };
 		C0316BAE275263F700BBE3D9 /* UserDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailScreen.swift; sourceTree = "<group>"; };
 		C0316BB12752690900BBE3D9 /* ShortcutsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsScreen.swift; sourceTree = "<group>"; };
 		C0316BB4275274FC00BBE3D9 /* UserLocationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationScreen.swift; sourceTree = "<group>"; };
+		C0B1C55A2752E7C9002DD942 /* SwiftUIRouter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUIRouter; path = ../../SwiftUIRouter; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0316BB827527FE100BBE3D9 /* SwiftUIRouter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0316BAD2752629300BBE3D9 /* SwiftUIRouter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +70,7 @@
 		C0316B4E275243CC00BBE3D9 = {
 			isa = PBXGroup;
 			children = (
+				C0B1C5592752E7C9002DD942 /* Packages */,
 				C0316B53275243CC00BBE3D9 /* Shared */,
 				C0316B62275243CE00BBE3D9 /* macOS */,
 				C0316B5C275243CE00BBE3D9 /* Products */,
@@ -123,7 +120,6 @@
 		C0316B97275244BD00BBE3D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0316BAB2752627F00BBE3D9 /* SwiftUIRouter */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,6 +144,14 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
+		C0B1C5592752E7C9002DD942 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C0B1C55A2752E7C9002DD942 /* SwiftUIRouter */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,7 +169,6 @@
 			);
 			name = "RandomUsers (iOS)";
 			packageProductDependencies = (
-				C0316BB727527FE100BBE3D9 /* SwiftUIRouter */,
 			);
 			productName = "RandomUsers (iOS)";
 			productReference = C0316B5B275243CE00BBE3D9 /* RandomUsers.app */;
@@ -185,7 +188,6 @@
 			);
 			name = "RandomUsers (macOS)";
 			packageProductDependencies = (
-				C0316BAC2752629300BBE3D9 /* SwiftUIRouter */,
 			);
 			productName = "RandomUsers (macOS)";
 			productReference = C0316B61275243CE00BBE3D9 /* RandomUsers.app */;
@@ -548,17 +550,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C0316BAC2752629300BBE3D9 /* SwiftUIRouter */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SwiftUIRouter;
-		};
-		C0316BB727527FE100BBE3D9 /* SwiftUIRouter */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SwiftUIRouter;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C0316B4F275243CC00BBE3D9 /* Project object */;
 }
