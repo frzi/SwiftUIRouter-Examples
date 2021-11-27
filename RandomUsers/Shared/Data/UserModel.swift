@@ -21,7 +21,7 @@ struct UserModel: Decodable, Identifiable {
 		name.title + " " + name.first + " " + name.last
 	}
 	
-	// MAKR: -
+	// MARK: - Sub types
 	struct DateOfBirth: Decodable {
 		let age: Int
 		let date: String

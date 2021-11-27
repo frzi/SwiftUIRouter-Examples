@@ -30,6 +30,7 @@
 		C0316BB32752690900BBE3D9 /* ShortcutsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BB12752690900BBE3D9 /* ShortcutsScreen.swift */; };
 		C0316BB5275274FC00BBE3D9 /* UserLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BB4275274FC00BBE3D9 /* UserLocationScreen.swift */; };
 		C0316BB6275274FC00BBE3D9 /* UserLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BB4275274FC00BBE3D9 /* UserLocationScreen.swift */; };
+		C0316BB827527FE100BBE3D9 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0316BB727527FE100BBE3D9 /* SwiftUIRouter */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0316BB827527FE100BBE3D9 /* SwiftUIRouter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,10 +140,10 @@
 		C0316BA12752491000BBE3D9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				C0316BB12752690900BBE3D9 /* ShortcutsScreen.swift */,
+				C0316BA22752491E00BBE3D9 /* UsersScreen.swift */,
 				C0316BAE275263F700BBE3D9 /* UserDetailScreen.swift */,
 				C0316BB4275274FC00BBE3D9 /* UserLocationScreen.swift */,
-				C0316BA22752491E00BBE3D9 /* UsersScreen.swift */,
+				C0316BB12752690900BBE3D9 /* ShortcutsScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -163,6 +165,7 @@
 			);
 			name = "RandomUsers (iOS)";
 			packageProductDependencies = (
+				C0316BB727527FE100BBE3D9 /* SwiftUIRouter */,
 			);
 			productName = "RandomUsers (iOS)";
 			productReference = C0316B5B275243CE00BBE3D9 /* RandomUsers.app */;
@@ -408,9 +411,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,9 +442,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -546,6 +551,10 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		C0316BAC2752629300BBE3D9 /* SwiftUIRouter */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUIRouter;
+		};
+		C0316BB727527FE100BBE3D9 /* SwiftUIRouter */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftUIRouter;
 		};

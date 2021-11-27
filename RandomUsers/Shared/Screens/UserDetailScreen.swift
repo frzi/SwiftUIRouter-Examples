@@ -7,6 +7,7 @@ import Foundation
 import SwiftUI
 import SwiftUIRouter
 
+/// (17) Again a very simple view with nothing but a `SwitchRoutes` and some routes.
 struct UserDetailScreen: View {
 	let user: UserModel
 	
