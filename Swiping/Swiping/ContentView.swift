@@ -38,7 +38,7 @@ private struct FirstScreen: View {
 			}
 		}
 		.frame(maxWidth: .infinity, maxHeight: .infinity)
-		.background(Color.red)
+		.background(Color.orange)
 	}
 }
 
@@ -66,7 +66,7 @@ private struct SecondScreen: View {
 private struct ThirdScreen: View {
 	var body: some View {
 		VStack {
-			Text("third screen")
+			Text("Third screen")
 				.font(.title)
 				.padding()
 			

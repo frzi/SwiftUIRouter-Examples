@@ -12,9 +12,9 @@
 		C0B1C5742752E877002DD942 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B1C5622752E875002DD942 /* RootView.swift */; };
 		C0B1C5752752E877002DD942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B1C5632752E877002DD942 /* Assets.xcassets */; };
 		C0B1C5762752E877002DD942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B1C5632752E877002DD942 /* Assets.xcassets */; };
-		C0B1C5832752E9A4002DD942 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0B1C5822752E9A4002DD942 /* SwiftUIRouter */; };
-		C0B1C5852752E9CA002DD942 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0B1C5842752E9CA002DD942 /* SwiftUIRouter */; };
 		C0B1C5882752F1FF002DD942 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B1C5872752F1FF002DD942 /* RootView.swift */; };
+		C0B1C58B2752F2FB002DD942 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0B1C58A2752F2FB002DD942 /* SwiftUIRouter */; };
+		C0B1C58D2752F301002DD942 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0B1C58C2752F301002DD942 /* SwiftUIRouter */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,6 @@
 		C0B1C5682752E877002DD942 /* TabViewRouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabViewRouting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B1C56E2752E877002DD942 /* TabViewRouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabViewRouting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B1C5702752E877002DD942 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		C0B1C5812752E99C002DD942 /* SwiftUIRouter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUIRouter; path = ../../SwiftUIRouter; sourceTree = "<group>"; };
 		C0B1C5872752F1FF002DD942 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,7 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0B1C5832752E9A4002DD942 /* SwiftUIRouter in Frameworks */,
+				C0B1C58B2752F2FB002DD942 /* SwiftUIRouter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0B1C5852752E9CA002DD942 /* SwiftUIRouter in Frameworks */,
+				C0B1C58D2752F301002DD942 /* SwiftUIRouter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +88,6 @@
 		C0B1C5802752E98D002DD942 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0B1C5812752E99C002DD942 /* SwiftUIRouter */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,7 +117,7 @@
 			);
 			name = "TabViewRouting (iOS)";
 			packageProductDependencies = (
-				C0B1C5822752E9A4002DD942 /* SwiftUIRouter */,
+				C0B1C58A2752F2FB002DD942 /* SwiftUIRouter */,
 			);
 			productName = "TabViewRouting (iOS)";
 			productReference = C0B1C5682752E877002DD942 /* TabViewRouting.app */;
@@ -139,7 +137,7 @@
 			);
 			name = "TabViewRouting (macOS)";
 			packageProductDependencies = (
-				C0B1C5842752E9CA002DD942 /* SwiftUIRouter */,
+				C0B1C58C2752F301002DD942 /* SwiftUIRouter */,
 			);
 			productName = "TabViewRouting (macOS)";
 			productReference = C0B1C56E2752E877002DD942 /* TabViewRouting.app */;
@@ -172,6 +170,9 @@
 				Base,
 			);
 			mainGroup = C0B1C55B2752E875002DD942;
+			packageReferences = (
+				C0B1C5892752F2FB002DD942 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */,
+			);
 			productRefGroup = C0B1C5692752E877002DD942 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -483,13 +484,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		C0B1C5892752F2FB002DD942 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/frzi/SwiftUIRouter";
+			requirement = {
+				branch = dev/docs;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		C0B1C5822752E9A4002DD942 /* SwiftUIRouter */ = {
+		C0B1C58A2752F2FB002DD942 /* SwiftUIRouter */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = C0B1C5892752F2FB002DD942 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
 			productName = SwiftUIRouter;
 		};
-		C0B1C5842752E9CA002DD942 /* SwiftUIRouter */ = {
+		C0B1C58C2752F301002DD942 /* SwiftUIRouter */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = C0B1C5892752F2FB002DD942 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
 			productName = SwiftUIRouter;
 		};
 /* End XCSwiftPackageProductDependency section */
