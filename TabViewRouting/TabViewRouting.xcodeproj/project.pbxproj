@@ -15,6 +15,8 @@
 		C0B1C5882752F1FF002DD942 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B1C5872752F1FF002DD942 /* RootView.swift */; };
 		C0B1C58B2752F2FB002DD942 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0B1C58A2752F2FB002DD942 /* SwiftUIRouter */; };
 		C0B1C58D2752F301002DD942 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0B1C58C2752F301002DD942 /* SwiftUIRouter */; };
+		C0E67C4027540AFC00F8EC58 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E67C3F27540AFC00F8EC58 /* Screens.swift */; };
+		C0E67C4127540AFC00F8EC58 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E67C3F27540AFC00F8EC58 /* Screens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,7 @@
 		C0B1C56E2752E877002DD942 /* TabViewRouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabViewRouting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B1C5702752E877002DD942 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		C0B1C5872752F1FF002DD942 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		C0E67C3F27540AFC00F8EC58 /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				C0B1C5612752E875002DD942 /* TabViewRoutingApp.swift */,
+				C0E67C3F27540AFC00F8EC58 /* Screens.swift */,
 				C0B1C5632752E877002DD942 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -207,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0E67C4027540AFC00F8EC58 /* Screens.swift in Sources */,
 				C0B1C5882752F1FF002DD942 /* RootView.swift in Sources */,
 				C0B1C5712752E877002DD942 /* TabViewRoutingApp.swift in Sources */,
 			);
@@ -216,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0E67C4127540AFC00F8EC58 /* Screens.swift in Sources */,
 				C0B1C5742752E877002DD942 /* RootView.swift in Sources */,
 				C0B1C5722752E877002DD942 /* TabViewRoutingApp.swift in Sources */,
 			);
