@@ -11,7 +11,6 @@ This repository contains examples demonstrating how to utilize path-based routin
 | Example | Platforms<sup>1,2</sup> | Description |
 | ------- | ---------- | ----------- |
 | [RandomUsers](RandomUsers) | iOS, macOS | A simple contacts-like app with 100 randomly generated users from [randomuser.me](https://randomuser.me). It demonstrates most of the features *SwiftUI Router* has to offer, how to organize routes and being able to redirect users to different parts of the app with a single button. |
-| [Github Explorer](GithubExplorer) | iOS, macOS | A barebones Github client to browse users and repositories. It demonstrates most of *SwiftUI Router*'s features, how to organize routes as well as dealing with asynchronous data. |
 | [Swiping](Swiping) | iOS | A featureless app trying to replicate iOS's swipe-to-return navigation. |
 | [TabView](TabViewRouting) | iOS, macOS | Example of how to combine *SwiftUI Router* and SwiftUI's builtin `TabView`. |
 
