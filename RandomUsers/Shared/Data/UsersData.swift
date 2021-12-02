@@ -6,7 +6,7 @@
 import Combine
 import Foundation
 
-/// This code is unimportant at unrelated to the workings of SwiftUI Router.
+/// This code is unimportant and unrelated to the workings of SwiftUI Router.
 /// `UsersData` simply holds all the data we use throughout the app (loaded from a single JSON found in the bundle).
 /// We use an `ObservableObject` as an environment object as singletons (shared instances) are generally discouraged
 /// when working with data in SwiftUI.

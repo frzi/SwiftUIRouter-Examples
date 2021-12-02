@@ -15,16 +15,19 @@ struct RootView: View {
 			Image(systemName: "arrow.left")
 		}
 		.disabled(!navigator.canGoBack)
+		.help("Go back")
 	
 		Button(action: { navigator.goForward() }) {
 			Image(systemName: "arrow.right")
 		}
 		.disabled(!navigator.canGoForward)
+		.help("Go forward")
 		
 		Button(action: { navigator.clear() }) {
 			Image(systemName: "clear")
 		}
 		.disabled(!navigator.canGoBack && !navigator.canGoForward)
+		.help("Clear history stacks")
 	}
 
 	var body: some View {
@@ -47,7 +50,7 @@ struct RootView: View {
 		}
 		#endif
 		/// To better keep track of the current path we'll print it to the console every time it changes.
-		/// This would also be a great time to store the current path to UserDefaults/AppStore, or send it to a
+		/// This would also be a great time to store the current path to UserDefaults/AppStorage, or send it to a
 		/// backend for analytic reasons.
 		.onChange(of: navigator.path) { newPath in
 			print("Current path:", newPath)
@@ -92,7 +95,7 @@ private struct RootRoutes: View {
 // MARK: - Custom Tab bar
 /// (9) Because SwiftUI Router uses its own states for navigation it's not made to work with SwiftUI's builtin TabView.
 /// Though one can get both TabView and SwiftUI Router to work together, with a little bit of extra code.
-/// However, in the interest of keeping things straightforward, we use custom tab bar to utilize SwiftUI Router's
+/// However, in the interest of keeping things straightforward, we use a custom tab bar to utilize SwiftUI Router's
 /// `NavLink` button.
 private struct TabBar: View {
 	@EnvironmentObject private var navigator: Navigator

@@ -29,6 +29,8 @@
 		C0316BB32752690900BBE3D9 /* ShortcutsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BB12752690900BBE3D9 /* ShortcutsScreen.swift */; };
 		C0316BB5275274FC00BBE3D9 /* UserLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BB4275274FC00BBE3D9 /* UserLocationScreen.swift */; };
 		C0316BB6275274FC00BBE3D9 /* UserLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BB4275274FC00BBE3D9 /* UserLocationScreen.swift */; };
+		C0BE85002758EA8100568459 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0BE84FF2758EA8100568459 /* SwiftUIRouter */; };
+		C0BE85022758EB7300568459 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0BE85012758EB7300568459 /* SwiftUIRouter */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +48,6 @@
 		C0316BAE275263F700BBE3D9 /* UserDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailScreen.swift; sourceTree = "<group>"; };
 		C0316BB12752690900BBE3D9 /* ShortcutsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsScreen.swift; sourceTree = "<group>"; };
 		C0316BB4275274FC00BBE3D9 /* UserLocationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationScreen.swift; sourceTree = "<group>"; };
-		C0B1C55A2752E7C9002DD942 /* SwiftUIRouter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUIRouter; path = ../../SwiftUIRouter; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0BE85002758EA8100568459 /* SwiftUIRouter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0BE85022758EB7300568459 /* SwiftUIRouter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +73,6 @@
 		C0316B4E275243CC00BBE3D9 = {
 			isa = PBXGroup;
 			children = (
-				C0B1C5592752E7C9002DD942 /* Packages */,
 				C0316B53275243CC00BBE3D9 /* Shared */,
 				C0316B62275243CE00BBE3D9 /* macOS */,
 				C0316B5C275243CE00BBE3D9 /* Products */,
@@ -144,14 +146,6 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		C0B1C5592752E7C9002DD942 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				C0B1C55A2752E7C9002DD942 /* SwiftUIRouter */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,6 +163,7 @@
 			);
 			name = "RandomUsers (iOS)";
 			packageProductDependencies = (
+				C0BE84FF2758EA8100568459 /* SwiftUIRouter */,
 			);
 			productName = "RandomUsers (iOS)";
 			productReference = C0316B5B275243CE00BBE3D9 /* RandomUsers.app */;
@@ -188,6 +183,7 @@
 			);
 			name = "RandomUsers (macOS)";
 			packageProductDependencies = (
+				C0BE85012758EB7300568459 /* SwiftUIRouter */,
 			);
 			productName = "RandomUsers (macOS)";
 			productReference = C0316B61275243CE00BBE3D9 /* RandomUsers.app */;
@@ -221,6 +217,7 @@
 			);
 			mainGroup = C0316B4E275243CC00BBE3D9;
 			packageReferences = (
+				C0BE84FE2758EA8100568459 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */,
 			);
 			productRefGroup = C0316B5C275243CE00BBE3D9 /* Products */;
 			projectDirPath = "";
@@ -550,6 +547,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C0BE84FE2758EA8100568459 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/frzi/SwiftUIRouter";
+			requirement = {
+				branch = dev/docs;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C0BE84FF2758EA8100568459 /* SwiftUIRouter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0BE84FE2758EA8100568459 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
+			productName = SwiftUIRouter;
+		};
+		C0BE85012758EB7300568459 /* SwiftUIRouter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0BE84FE2758EA8100568459 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
+			productName = SwiftUIRouter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C0316B4F275243CC00BBE3D9 /* Project object */;
 }
