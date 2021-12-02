@@ -41,13 +41,13 @@ struct ShortcutsScreen: View {
 				}
 				
 				/// Navigates to a user that doesn't exist. In `UsersScreen` we programmed a fallback for invalid paths
-				/// to users (see 12, 13 and 14).
+				/// to users (see (12), (13) and (14)).
 				RowButton(path: "/users/fakeuuid") {
 					Text("Go to a non-existent user")
 				}
 				
 				/// Navigates to a path that's completely non-existent. In `RootRoutes` we programmed a fallback route
-				/// that redirects the user back to `/users` (see 7).
+				/// that redirects the user back to `/users` (see (7)).
 				RowButton(path: "/foo/bar") {
 					Text("Go to `/foo/bar`, a non-existent path.")
 				}

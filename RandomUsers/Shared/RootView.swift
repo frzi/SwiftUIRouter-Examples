@@ -35,7 +35,7 @@ struct RootView: View {
 			print("Current path:", newPath)
 		}
     }
-	
+
 	@ViewBuilder
 	private func toolbarContents() -> some View {
 		Button(action: { navigator.goBack() }) {
@@ -65,9 +65,10 @@ struct RootView: View {
 }
 
 // MARK: - Routes
-/// (3) The only purpose of this view is to determine what to render for which paths.
-/// By using a simple view like this we can better separate our routing logic, without obfuscating it with unrelated
+/// (3) The only purpose of this view is to determine what to render depending on the path.
+/// By using a simple view like this we can better separate our routing logic without obfuscating it with unrelated
 /// code.
+/// A component like this is called a 'Routes view', or simply 'Middleware'.
 private struct RootRoutes: View {	
 	var body: some View {
 		/// (4) A `SwitchRoutes` is like a `switch`, but for routes. Only the first matching `Route` will be rendered.
@@ -76,7 +77,7 @@ private struct RootRoutes: View {
 		SwitchRoutes {
 			/// (5) The first defined route. If the current path is `/shortcuts`, the `ShortcutsScreen` view will be
 			/// rendered. Note the lack of `/` in the defined path. This is due to all paths in SwiftUI Router being
-			/// relative to any parent routes.
+			/// relative to the first parent route. (In this case that would be the `Router`)
 			Route("shortcuts", content: ShortcutsScreen())
 			
 			/// (6) A wildcard (`*`) is used in this path to indicate this route should also render `UsersScreen` for

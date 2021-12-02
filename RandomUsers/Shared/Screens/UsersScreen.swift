@@ -11,23 +11,11 @@ import SwiftUI
 struct UsersScreen: View {
 	@EnvironmentObject private var usersData: UsersData
 	@EnvironmentObject private var routeInformation: RouteInformation
-
-	/// (13) A validator function called by a `Route` (see 12). It first checks whether the UUID in the path is a
-	/// valid UUID. It then checks if there are any users with the UUID. If either checks faill we return `nil`.
-	/// If there *is* a user with this UUID, we pass along said user.
-	private func findUser(route: RouteInformation) -> UserModel? {
-		if let parameter = route.parameters["uuid"],
-		   let uuid = UUID(uuidString: parameter)
-		{
-			return usersData.users.first { $0.id == uuid }
-		}
-		return nil
-	}
 	
 	var body: some View {
 		SwitchRoutes {
 			/// (12) A route with a parameter (aka a placeholder). The `:uuid` placeholder can be anything.
-			/// We use the `validator` option to add an extra layer of validation to our route (see 13). If the
+			/// We use the `validator` option to add an extra layer of validation to our route (see (15)). If the
 			/// validator function returns `nil`, the route will be ignored. This time we want to make sure the `:uuid`
 			/// placeholder contains a valid UUID as well as make sure the UUID is associated with an actual user.
 			/// If the validator found a matching user, said user will be passed down to the child views. We then
@@ -36,15 +24,27 @@ struct UsersScreen: View {
 				UserDetailScreen(user: user)
 			}
 
-			/// (14) If the previous route failed, but the path still contains more component than we need, redirect
+			/// (13) If the previous route failed, but the path still contains more component than we need, redirect
 			/// the user to the path this view is defined in. (In this case `/users`)
 			Route(":anything/*") {
 				Navigate(to: routeInformation.path)
 			}
 			
-			/// (15) Render the default view: `UsersList`.
+			/// (14) Render the default view: `UsersList`.
 			Route(content: UsersList())
 		}
+	}
+	
+	/// (15) A validator function called by a `Route` (see (12)). It first checks whether the UUID in the path is a
+	/// valid UUID. It then checks if there are any users with said UUID. If either checks fail we return `nil`.
+	/// If there *is* a user with this UUID, we pass along said user.
+	private func findUser(route: RouteInformation) -> UserModel? {
+		if let parameter = route.parameters["uuid"],
+		   let uuid = UUID(uuidString: parameter)
+		{
+			return usersData.users.first { $0.id == uuid }
+		}
+		return nil
 	}
 }
 
@@ -66,7 +66,7 @@ private struct UsersList: View {
 	
 	private func UsersListCell(user: UserModel) -> some View {
 		/// (16) Link to `/users/{user uuid}`. Keep in mind that paths in SwiftUI Router are always relative. This
-		/// `NavLink` is being rendered inside a `Route` with path `/users/*` (see 6).
+		/// `NavLink` is being rendered inside a `Route` with path `/users/*` (see (6)).
 		NavLink(to: user.id.uuidString) {
 			HStack {
 				AsyncImage(url: user.picture.thumbnail)
