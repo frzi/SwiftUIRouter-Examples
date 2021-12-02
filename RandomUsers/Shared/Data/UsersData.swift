@@ -28,7 +28,9 @@ final class UsersData: ObservableObject {
 			
 			let jsonData = try Data(contentsOf: jsonPath)
 			let json = try decoder.decode(RandomUsersAPIResponse.self, from: jsonData)
-			users = json.results
+			users = json.results.sorted { left, right in
+				left.name.last < right.name.last
+			}
 		}
 		catch {
 			print(error)
