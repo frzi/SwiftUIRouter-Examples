@@ -26,8 +26,11 @@ struct UsersScreen: View {
 
 			/// (13) If the previous route failed, but the path still contains more component than we need, redirect
 			/// the user to the path this view is defined in. (In this case `/users`)
-			Route(":anything/*") {
+			Route(":anything/*") { route in
 				Navigate(to: routeInformation.path)
+					.onAppear {
+						print("Path \(route.path) doesn't exist. Redirecting to \(routeInformation.path)")
+					}
 			}
 			
 			/// (14) Render the default view: `UsersList`.
