@@ -129,8 +129,8 @@
 		C0316B9A2752450B00BBE3D9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				C0316B9B2752451E00BBE3D9 /* UsersData.swift */,
 				C0316B9E275245CD00BBE3D9 /* UserModel.swift */,
+				C0316B9B2752451E00BBE3D9 /* UsersData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";

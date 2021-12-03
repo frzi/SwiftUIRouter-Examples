@@ -3,8 +3,8 @@
 //  Created by Freek (github.com/frzi) 2021
 //
 
-import Foundation
 import CoreLocation
+import Foundation
 
 struct UserModel: Decodable, Identifiable {
 	let dob: DateOfBirth

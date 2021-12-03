@@ -4,13 +4,13 @@
 //
 
 import Foundation
-import SwiftUIRouter
 import SwiftUI
+import SwiftUIRouter
 
 /// (11) Another view whose only job is to define routes, though this time it comes with some additional logic.
 struct UsersScreen: View {
-	@EnvironmentObject private var usersData: UsersData
 	@EnvironmentObject private var routeInformation: RouteInformation
+	@EnvironmentObject private var usersData: UsersData
 	
 	var body: some View {
 		SwitchRoutes {
