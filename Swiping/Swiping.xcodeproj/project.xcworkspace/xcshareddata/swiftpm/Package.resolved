@@ -5,9 +5,9 @@
         "package": "SwiftUIRouter",
         "repositoryURL": "https://github.com/frzi/SwiftUIRouter",
         "state": {
-          "branch": "dev/docs",
-          "revision": "7b5d188e666879ea6f9ec635c0e8cd6ae1a0524d",
-          "version": null
+          "branch": null,
+          "revision": "5e69c689ceaae3c8ed52ae535f294aeb262dc812",
+          "version": "1.3.0"
         }
       }
     ]

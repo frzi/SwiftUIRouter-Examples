@@ -29,8 +29,8 @@
 		C0316BB32752690900BBE3D9 /* ShortcutsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BB12752690900BBE3D9 /* ShortcutsScreen.swift */; };
 		C0316BB5275274FC00BBE3D9 /* UserLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BB4275274FC00BBE3D9 /* UserLocationScreen.swift */; };
 		C0316BB6275274FC00BBE3D9 /* UserLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0316BB4275274FC00BBE3D9 /* UserLocationScreen.swift */; };
-		C0BE85002758EA8100568459 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0BE84FF2758EA8100568459 /* SwiftUIRouter */; };
-		C0BE85022758EB7300568459 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0BE85012758EB7300568459 /* SwiftUIRouter */; };
+		C0DAACD2275BF3DD001A4EB4 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0DAACD1275BF3DD001A4EB4 /* SwiftUIRouter */; };
+		C0DAACD4275BF3E4001A4EB4 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C0DAACD3275BF3E4001A4EB4 /* SwiftUIRouter */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0BE85002758EA8100568459 /* SwiftUIRouter in Frameworks */,
+				C0DAACD2275BF3DD001A4EB4 /* SwiftUIRouter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0BE85022758EB7300568459 /* SwiftUIRouter in Frameworks */,
+				C0DAACD4275BF3E4001A4EB4 /* SwiftUIRouter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +163,7 @@
 			);
 			name = "RandomUsers (iOS)";
 			packageProductDependencies = (
-				C0BE84FF2758EA8100568459 /* SwiftUIRouter */,
+				C0DAACD1275BF3DD001A4EB4 /* SwiftUIRouter */,
 			);
 			productName = "RandomUsers (iOS)";
 			productReference = C0316B5B275243CE00BBE3D9 /* RandomUsers.app */;
@@ -183,7 +183,7 @@
 			);
 			name = "RandomUsers (macOS)";
 			packageProductDependencies = (
-				C0BE85012758EB7300568459 /* SwiftUIRouter */,
+				C0DAACD3275BF3E4001A4EB4 /* SwiftUIRouter */,
 			);
 			productName = "RandomUsers (macOS)";
 			productReference = C0316B61275243CE00BBE3D9 /* RandomUsers.app */;
@@ -217,7 +217,7 @@
 			);
 			mainGroup = C0316B4E275243CC00BBE3D9;
 			packageReferences = (
-				C0BE84FE2758EA8100568459 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */,
+				C0DAACD0275BF3DD001A4EB4 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */,
 			);
 			productRefGroup = C0316B5C275243CE00BBE3D9 /* Products */;
 			projectDirPath = "";
@@ -549,25 +549,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C0BE84FE2758EA8100568459 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */ = {
+		C0DAACD0275BF3DD001A4EB4 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/frzi/SwiftUIRouter";
 			requirement = {
-				branch = dev/docs;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C0BE84FF2758EA8100568459 /* SwiftUIRouter */ = {
+		C0DAACD1275BF3DD001A4EB4 /* SwiftUIRouter */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C0BE84FE2758EA8100568459 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
+			package = C0DAACD0275BF3DD001A4EB4 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
 			productName = SwiftUIRouter;
 		};
-		C0BE85012758EB7300568459 /* SwiftUIRouter */ = {
+		C0DAACD3275BF3E4001A4EB4 /* SwiftUIRouter */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C0BE84FE2758EA8100568459 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
+			package = C0DAACD0275BF3DD001A4EB4 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
 			productName = SwiftUIRouter;
 		};
 /* End XCSwiftPackageProductDependency section */
