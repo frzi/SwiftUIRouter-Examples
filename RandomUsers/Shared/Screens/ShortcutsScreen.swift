@@ -10,17 +10,17 @@ import SwiftUIRouter
 /// (18) This screen was added to demonstrate how easy it is to navigate to another parth of the app, as well as the
 /// results of navigating to a path that doesn't exist, or isn't valid
 struct ShortcutsScreen: View {
-	@EnvironmentObject private var usersData: UsersData
+	@Environment(UsersData.self) private var usersData
 		
 	var body: some View {
 		let firstUser = usersData.users[0]
 		let secondUser = usersData.users[1]
 		
-		return GeometryReader { _ in
+		GeometryReader { _ in
 			List {
 				Text("Shortcuts")
 					.font(.title)
-				
+
 				Text(
 					"""
 					This screen demonstrates the flexibility of working with path-based routing.
@@ -54,6 +54,7 @@ struct ShortcutsScreen: View {
 			}
 			.listStyle(.plain)
 		}
+		.background(Color.white)
 	}
 	
 	private func RowButton<Content: View>(path: String, @ViewBuilder content: @escaping () -> Content) -> some View {

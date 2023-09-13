@@ -9,9 +9,9 @@ import SwiftUIRouter
 
 /// (11) Another view whose only job is to define routes, though this time it comes with some additional logic.
 struct UsersScreen: View {
-	@EnvironmentObject private var routeInformation: RouteInformation
-	@EnvironmentObject private var usersData: UsersData
-	
+	@Environment(RouteInformation.self) private var routeInformation
+	@Environment(UsersData.self) private var usersData
+
 	var body: some View {
 		SwitchRoutes {
 			/// (12) A route with a parameter (aka a placeholder). The `:uuid` placeholder can be anything.
@@ -53,8 +53,8 @@ struct UsersScreen: View {
 
 // MARK: -
 private struct UsersList: View {
-	@EnvironmentObject private var usersData: UsersData
-	
+	@Environment(UsersData.self) private var usersData
+
 	var body: some View {
 		List {
 			Text("User list")
@@ -65,8 +65,9 @@ private struct UsersList: View {
 			}
 		}
 		.listStyle(.plain)
+		.background(Color.white)
 	}
-	
+
 	private func UsersListCell(user: UserModel) -> some View {
 		/// (16) Link to `/users/{user uuid}`. Keep in mind that paths in SwiftUI Router are always relative. This
 		/// `NavLink` is being rendered inside a `Route` with path `/users/*` (see (6)).
@@ -88,6 +89,7 @@ private struct UsersList: View {
 				Image(systemName: "chevron.right")
 			}
 			.padding(.vertical, 2)
+			.contentShape(Rectangle())
 		}
 		.buttonStyle(.plain)
 		.frame(maxWidth: .infinity)

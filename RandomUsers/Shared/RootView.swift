@@ -7,7 +7,7 @@ import SwiftUI
 import SwiftUIRouter
 
 struct RootView: View {
-	@EnvironmentObject private var navigator: Navigator
+	@Environment(Navigator.self) private var navigator
 
 	var body: some View {
 		VStack {
@@ -31,7 +31,7 @@ struct RootView: View {
 		/// To better keep track of the current path we'll print it to the console every time it changes.
 		/// This would also be a great time to store the current path to UserDefaults/AppStorage, or send it to a
 		/// backend for analytic reasons.
-		.onChange(of: navigator.path) { newPath in
+		.onChange(of: navigator.path) { oldPath, newPath in
 			print("Current path:", newPath)
 		}
     }
@@ -70,7 +70,7 @@ struct RootView: View {
 /// code.
 /// A component like this is called a 'Routes view', or simply 'Middleware'.
 private struct RootRoutes: View {	
-	var body: some View {
+	@ViewBuilder var body: some View {
 		/// (4) A `SwitchRoutes` is like a `switch`, but for routes. Only the first matching `Route` will be rendered.
 		/// This allows you to create 'fallback' routes (shown below), as well as gain potentional performance boost:
 		/// once a route has been matched, any following routes can immediately skip any work on path matching.
@@ -105,7 +105,7 @@ private struct RootRoutes: View {
 /// However, in the interest of keeping things straightforward, we use a custom tab bar to utilize SwiftUI Router's
 /// `NavLink` button.
 private struct TabBar: View {
-	@EnvironmentObject private var navigator: Navigator
+	@Environment(Navigator.self) private var navigator
 	
 	var body: some View {
 		HStack {

@@ -62,6 +62,7 @@ private struct UserDetails: View {
 			}
 		}
 		.padding(20)
+		.background(Color.white)
 	}
 	
 	private func DetailRow<Content: View>(

@@ -8,7 +8,7 @@ import SwiftUIRouter
 
 @main
 struct RandomUsersApp: App {
-	@StateObject private var usersData = UsersData()
+	@State private var usersData = UsersData()
 	
     var body: some Scene {
         WindowGroup {
@@ -21,7 +21,7 @@ struct RandomUsersApp: App {
 			Router {
 				RootView()
 			}
-			.environmentObject(usersData)
+			.environment(usersData)
 			#if os(macOS)
 			.frame(minWidth: 400, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
 			#endif

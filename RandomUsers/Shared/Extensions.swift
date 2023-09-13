@@ -3,7 +3,6 @@
 //  Created by Freek (github.com/frzi) 2021
 //
 
-import Foundation
 import SwiftUI
 import SwiftUIRouter
 
@@ -15,20 +14,35 @@ extension View {
 }
 
 private struct NavigationTransition: ViewModifier {
-	@EnvironmentObject private var navigator: Navigator
-	
-	private func transition(for direction: NavigationAction.Direction?) -> AnyTransition {
-		if direction == .deeper || direction == .sideways {
-			return AnyTransition.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading))
-		}
-		else {
-			return AnyTransition.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .trailing))
-		}
-	}
+	@Environment(Navigator.self) private var navigator
 	
 	func body(content: Content) -> some View {
 		content
-			.animation(.easeInOut, value: navigator.path)
-			.transition(transition(for: navigator.lastAction?.direction))
+			.animation(.smooth(duration: 0.4), value: navigator.lastAction)
+			.transition(ScreenTransition(navigator: navigator))
+	}
+}
+
+struct ScreenTransition: Transition {
+	/// We pass the environment's `Navigator` to the transition so we have the latest, most recent
+	/// `NavigationAction.Direction` value, without it being out of date.
+	unowned let navigator: Navigator
+
+	private var direction: NavigationAction.Direction {
+		navigator.lastAction?.direction ?? .sideways
+	}
+
+	func body(content: Content, phase: TransitionPhase) -> some View {
+		print(direction)
+		let goFurther = direction == .deeper || direction == .sideways || navigator.lastAction?.action != .back
+
+		let offset: CGFloat = switch phase {
+		case .identity: 0
+		case .didDisappear: goFurther ? -200 : 200
+		case .willAppear: goFurther ? 400 : -400
+		}
+
+		return content
+			.offset(x: offset)
 	}
 }

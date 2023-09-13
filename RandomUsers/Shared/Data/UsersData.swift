@@ -10,8 +10,8 @@ import Foundation
 /// `UsersData` simply holds all the data we use throughout the app (loaded from a single JSON found in the bundle).
 /// We use an `ObservableObject` as an environment object as singletons (shared instances) are generally discouraged
 /// when working with data in SwiftUI.
-final class UsersData: ObservableObject {
-	@Published private(set) var users: [UserModel]
+@Observable final class UsersData {
+	private(set) var users: [UserModel]
 	
 	init() {
 		let decoder = JSONDecoder()
