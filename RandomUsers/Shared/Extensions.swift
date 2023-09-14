@@ -23,7 +23,7 @@ private struct NavigationTransition: ViewModifier {
 	}
 }
 
-struct ScreenTransition: Transition {
+private struct ScreenTransition: Transition {
 	/// We pass the environment's `Navigator` to the transition so we have the latest, most recent
 	/// `NavigationAction.Direction` value, without it being out of date.
 	unowned let navigator: Navigator
@@ -33,8 +33,9 @@ struct ScreenTransition: Transition {
 	}
 
 	func body(content: Content, phase: TransitionPhase) -> some View {
-		print(direction)
-		let goFurther = direction == .deeper || direction == .sideways || navigator.lastAction?.action != .back
+		let goFurther = direction == .deeper
+			|| direction == .sideways
+			|| navigator.lastAction?.action != .back
 
 		let offset: CGFloat = switch phase {
 		case .identity: 0
@@ -44,5 +45,12 @@ struct ScreenTransition: Transition {
 
 		return content
 			.offset(x: offset)
+			.animation(.smooth, value: phase)
+			.overlay(
+				Rectangle()
+					.fill(Color.black)
+					.opacity(phase.isIdentity ? 0 : 0.2)
+					.animation(.smooth, value: phase)
+			)
 	}
 }

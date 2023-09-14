@@ -70,7 +70,7 @@ struct RootView: View {
 /// code.
 /// A component like this is called a 'Routes view', or simply 'Middleware'.
 private struct RootRoutes: View {	
-	@ViewBuilder var body: some View {
+	var body: some View {
 		/// (4) A `SwitchRoutes` is like a `switch`, but for routes. Only the first matching `Route` will be rendered.
 		/// This allows you to create 'fallback' routes (shown below), as well as gain potentional performance boost:
 		/// once a route has been matched, any following routes can immediately skip any work on path matching.

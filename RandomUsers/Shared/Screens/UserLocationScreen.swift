@@ -11,35 +11,23 @@ struct UserLocationScreen: View {
 	let location: UserModel.Location
 	
 	@State private var uuid = UUID()
-	@State private var region: MKCoordinateRegion
 	@State private var mapCamera: MapCameraPosition
 
 	init(location: UserModel.Location) {
-		self._region = State(initialValue: MKCoordinateRegion(
-			center: location.coordinates.clLocation,
-			latitudinalMeters: 1e4,
-			longitudinalMeters: 1e4
-		))
-
 		self._mapCamera = State(
-			initialValue: .camera(MapCamera(centerCoordinate: location.coordinates.clLocation, distance: 1e4))
+			initialValue: .camera(MapCamera(
+				centerCoordinate: location.coordinates.clLocation,
+				distance: 1e4
+			))
 		)
 
 		self.location = location
 	}
 	
-	private var pin: LocationPin {
-		LocationPin(id: uuid, location: location.coordinates.clLocation)
-	}
-	
 	var body: some View {
 		ZStack(alignment: .topTrailing) {
-//			Map(coordinateRegion: $region, annotationItems: [pin]) { pin in
-//				MapPin(coordinate: pin.location, tint: .blue)
-//			}
-
 			Map(position: $mapCamera) {
-				Marker(coordinate: pin.location) {
+				Marker(coordinate: location.coordinates.clLocation) {
 					Text("Labeltje")
 				}
 			}
@@ -50,10 +38,5 @@ struct UserLocationScreen: View {
 				.background(Color.black.opacity(0.5))
 		}
 		.background(Color.white)
-	}
-	
-	private struct LocationPin: Identifiable {
-		let id: UUID
-		let location: CLLocationCoordinate2D
 	}
 }

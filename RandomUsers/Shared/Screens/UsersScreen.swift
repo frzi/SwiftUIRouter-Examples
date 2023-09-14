@@ -24,7 +24,7 @@ struct UsersScreen: View {
 				UserDetailScreen(user: user)
 			}
 
-			/// (13) If the previous route failed, but the path still contains more component than we need, redirect
+			/// (13) If the previous route failed, but the path still contains more components than we need, redirect
 			/// the user to the path this view is defined in. (In this case `/users`)
 			Route(":anything/*") { route in
 				Navigate(to: routeInformation.path)
